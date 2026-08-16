@@ -1,26 +1,18 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import "./styles.css";
 
-/**
- * Vite entry (main.tsx)
- * Ensure frontend/index.html contains: <div id="root"></div>
- */
+// Optional global styles — create frontend/src/index.css if you want app-level styles
+import "./index.css";
 
 const container = document.getElementById("root");
 if (!container) {
-  throw new Error(
-    "Root container not found. Ensure your index.html contains <div id=\"root\"></div>."
-  );
+  throw new Error('Root container not found. Ensure there is an element with id "root" in your HTML.');
 }
 
-createRoot(container).render(
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-if (import.meta.hot) {
-  import.meta.hot.accept();
-}
