@@ -53,43 +53,39 @@ const pageContent = {
         title: 'MySamples',
         description: 'Manage your samples collection',
         render() {
-            return `
-                <div class="page">
-                    <div class="page-header">
-                        <h1 class="page-title">${this.title}</h1>
-                        <p class="page-description">${this.description}</p>
-                    </div>
-                    <div class="page-content">
-                        <div class="card">
-                            <div class="card-header">
-                                <h2 class="card-title">Sample List</h2>
-                            </div>
-                            <div class="card-body">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Sample ID</th>
-                                            <th>Name</th>
-                                            <th>Status</th>
-                                            <th>Date Created</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>No samples found</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <button class="btn btn-primary mt-3">Add Sample</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
+  return `
+    <div class="page">
+
+      <div class="page-header">
+        <h1>MySamples Search</h1>
+        <p>Search MySamples by SEID</p>
+      </div>
+
+      <div class="card">
+
+        <label>SEID</label>
+
+        <input
+          id="seidInput"
+          type="text"
+          placeholder="Enter SEID"
+        />
+
+        <br><br>
+
+        <button
+          class="btn btn-primary"
+          onclick="searchSEID()">
+          Search
+        </button>
+
+      </div>
+
+      <div id="resultTable"></div>
+
+    </div>
+  `;
+}
     },
 
     'wafer-plan': {
@@ -333,3 +329,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+function searchSEID() {
+
+  const seid =
+    document.getElementById("seidInput").value;
+
+  const resultHtml = `
+  <div class="card">
+
+    <h3>Results for ${seid}</h3>
+
+    <table class="table">
+
+      <thead>
+        <tr>
+          <th>SE#</th>
+          <th>Requestor</th>
+          <th>Mfg Stage</th>
+          <th>Demand</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>${seid}</td>
+          <td>Ramlee</td>
+          <td>Tested</td>
+          <td>6590</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+  `;
+
+  document
+    .getElementById("resultTable")
+    .innerHTML = resultHtml;
+}
