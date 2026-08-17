@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
+import ExecutiveDashboard from "./pages/ExecutiveDashboard";
 import MySamples from "./pages/MySamples";
 import WaferPlan from "./pages/WaferPlan";
 import WaferSimulation from "./pages/WaferSimulation";
@@ -20,6 +21,7 @@ export default function App(): JSX.Element {
 <div className="app-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/executive-dashboard" element={<ExecutiveDashboard />} />
             <Route path="/mysamples" element={<MySamples />} />
             <Route path="/wafer-plan" element={<WaferPlan />} />
             <Route path="/wafer-simulation" element={<WaferSimulation />} />
