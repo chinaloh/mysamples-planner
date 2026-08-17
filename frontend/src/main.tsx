@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 
 // Optional global styles — create frontend/src/index.css if you want app-level styles
-import "./index.css";
+import "./styles.css";
 
 const container = document.getElementById("root");
 if (!container) {
