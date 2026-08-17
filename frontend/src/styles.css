@@ -68,3 +68,10 @@ button:hover {
 input[type="file"] {
   width: 320px;
 }
+
+.form-group select {
+  width: 320px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
