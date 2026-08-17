@@ -13,6 +13,7 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   { name: "Home", to: "/" },
+  { name: "Executive Dashboard", to: "/executive-dashboard" },
   { name: "MySamples", to: "/mysamples", ariaLabel: "My Samples" },
   { name: "Wafer Plan", to: "/wafer-plan" },
   { name: "Wafer Simulation", to: "/wafer-simulation" },
