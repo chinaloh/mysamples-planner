@@ -12,12 +12,12 @@ import Help from "./pages/Help";
 export default function App(): JSX.Element {
   return (
     <BrowserRouter>
-      <div className="app-root" style={{ display: "flex", minHeight: "100vh" }}>
-        <aside style={{ width: 240, borderRight: "1px solid #e6e6e6" }}>
+<div className="app-root">
+<aside className="sidebar">
           <Navigation />
         </aside>
 
-        <div className="app-content" style={{ flex: 1, padding: 20 }}>
+<div className="app-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mysamples" element={<MySamples />} />
