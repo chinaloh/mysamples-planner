@@ -37,6 +37,18 @@ export default function Home(): JSX.Element {
   </ol>
 
 </section>
+
+      <section className="card">
+  <h2>Quick Actions</h2>
+
+  <ul>
+    <li>MySamples Raw Data Extraction</li>
+    <li>Wafer Plan Generation</li>
+    <li>Wafer Supply Simulation</li>
+    <li>Timeline Projection</li>
+  </ul>
+</section>
+      
     </main>
   );
 }
