@@ -155,14 +155,6 @@ const pageContent = {
                                         <option value="">-- Select Plan --</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="temperature">Temperature (°C)</label>
-                                    <input type="number" id="temperature" placeholder="Enter temperature">
-                                </div>
-                                <div class="form-group">
-                                    <label for="duration">Duration (minutes)</label>
-                                    <input type="number" id="duration" placeholder="Enter duration">
-                                </div>
                                 <button class="btn btn-primary">Run Simulation</button>
                             </div>
                         </div>
