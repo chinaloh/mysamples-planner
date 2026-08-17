@@ -109,19 +109,10 @@ const pageContent = {
                                     <input type="text" id="planName" placeholder="Enter plan name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="waferSize">Wafer Size</label>
-                                    <select id="waferSize">
-                                        <option value="">-- Select Size --</option>
-                                        <option value="6">6 inch</option>
-                                        <option value="8">8 inch</option>
-                                        <option value="12">12 inch</option>
-                                    </select>
+                                    <label for="waferSize">Wafer to Order</label>
+                                    <input type="text" id="Wafer to Order" placeholder="Enter Wafer to Order">
                                 </div>
-                                <div class="form-group">
-                                    <label for="material">Material</label>
-                                    <input type="text" id="material" placeholder="Enter material type">
-                                </div>
-                                <button class="btn btn-primary">Create Plan</button>
+                                <button class="btn btn-primary">Simulate Plan</button>
                             </div>
                         </div>
                         <div class="card">
