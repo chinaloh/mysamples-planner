@@ -66,9 +66,12 @@ export default function Help(): JSX.Element {
 
       </section>
 
-      <section className="card">
+<section className="card">
 
-        <h2>Need Support?</h2>
+  <h2>Need Support?</h2>
 
-        <p>
-          Contact the Planning Team or open the
+  <p>
+    Contact the Planning Team or open the AI Planning Assistant.
+  </p>
+
+</section>
